@@ -13,7 +13,7 @@ import spock.lang.Stepwise;
 
 /**
  * @author tobebetter9527
- * @description TODO
+ * @description 自定义SpringBootTest
  * @create 2021/02/16 12:10
  */
 @Target(ElementType.TYPE)
