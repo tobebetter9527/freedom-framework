@@ -1,7 +1,7 @@
 package com.freedom.code.repository;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.freedom.code.entity.UserDO;
+import com.freedom.common.entity.UserDO;
 import java.util.List;
 
 /**

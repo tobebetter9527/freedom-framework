@@ -1,4 +1,4 @@
-package com.freedom.code.dto;
+package com.freedom.common.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -10,7 +10,7 @@ import lombok.Data;
  * @create 2021/01/05 0:14
  */
 @Data
-public class RoleDTO {
+public class RoleDO {
   @TableId(type = IdType.ASSIGN_ID)
   private Long id;
   private String name;

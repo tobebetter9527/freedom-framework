@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>freedom-framework-parent</artifactId>
-    <groupId>org.freedom</groupId>
+    <groupId>com.freedom</groupId>
     <version>1.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
@@ -13,6 +13,12 @@
   <artifactId>freedom-code</artifactId>
 
   <dependencies>
+    <dependency>
+      <groupId>com.freedom</groupId>
+      <artifactId>freedom-common</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -27,10 +33,6 @@
       <scope>test</scope>
     </dependency>
 
-    <dependency>
-      <groupId>com.baomidou</groupId>
-      <artifactId>mybatis-plus-boot-starter</artifactId>
-    </dependency>
     <!--数据库-->
     <dependency>
       <groupId>mysql</groupId>
@@ -39,49 +41,6 @@
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>druid</artifactId>
-    </dependency>
-    <!--工具类-->
-    <dependency>
-      <groupId>commons-io</groupId>
-      <artifactId>commons-io</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>cn.hutool</groupId>
-      <artifactId>hutool-all</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>io.springfox</groupId>
-      <artifactId>springfox-boot-starter</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.springfox</groupId>
-      <artifactId>springfox-swagger-ui</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.mapstruct</groupId>
-      <artifactId>mapstruct</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.liquibase</groupId>
-      <artifactId>liquibase-core</artifactId>
     </dependency>
 
     <!--引入单元测试套件-->
@@ -127,12 +86,6 @@
     <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>${spring-boot.version}</version>
-      </plugin>
-
-      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven-compiler-plugin}</version>
@@ -153,6 +106,12 @@
             </path>
           </annotationProcessorPaths>
         </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${spring-boot.version}</version>
       </plugin>
 
       <plugin>
@@ -189,27 +148,19 @@
         <version>${jacoco-maven-plugin}</version>
         <configuration>
           <excludes>
-            <exclude>com/freedom/code/entity/*.class</exclude>
+            <exclude>com/freedom/common/model/*.class</exclude>
           </excludes>
         </configuration>
         <executions>
-          <execution>
+         <!-- <execution>
             <id>prepare-agent</id>
             <goals>
               <goal>prepare-agent</goal>
             </goals>
-          </execution>
+          </execution>-->
 
           <execution>
             <id>report</id>
-            <phase>package</phase>
-            <goals>
-              <goal>report</goal>
-            </goals>
-          </execution>
-
-          <execution>
-            <id>post-unit-test</id>
             <phase>test</phase>
             <goals>
               <goal>report</goal>
@@ -217,6 +168,14 @@
             <configuration>
               <dataFile>target/jacoco.exec</dataFile>
             </configuration>
+          </execution>
+
+          <execution>
+            <id>report-aggregate</id>
+            <phase>test</phase>
+            <goals>
+              <goal>report-aggregate</goal>
+            </goals>
           </execution>
         </executions>
       </plugin>

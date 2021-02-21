@@ -1,4 +1,4 @@
-package com.freedom.code.dto;
+package com.freedom.common.dto;
 
 import lombok.Data;
 

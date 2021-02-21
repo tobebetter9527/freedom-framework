@@ -4,7 +4,9 @@ import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
+import org.mockito.Mock;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,9 +15,9 @@ import org.springframework.context.annotation.Configuration;
  * @description TODO
  * @create 2021/01/02 11:27
  */
-@ConditionalOnProperty(prefix = "test.conditional", name = "enabled", havingValue = "false")
-@Configuration
-public class MybatisPlusConfig {
+@ConditionalOnProperty(prefix = "test.conditional", name = "enabled", havingValue = "true")
+@TestConfiguration
+public class TestMybatisPlusConfig {
 
   @Bean
   public MybatisPlusInterceptor mybatisPlusInterceptor() {

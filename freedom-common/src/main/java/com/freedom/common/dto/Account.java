@@ -1,4 +1,4 @@
-package com.freedom.code.dto;
+package com.freedom.common.dto;
 
 import java.math.BigDecimal;
 import lombok.Data;

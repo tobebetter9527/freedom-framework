@@ -1,4 +1,4 @@
-package com.freedom.code.entity;
+package com.freedom.common.entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

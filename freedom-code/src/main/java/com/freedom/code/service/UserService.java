@@ -1,7 +1,7 @@
 package com.freedom.code.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.freedom.code.entity.UserDO;
+import com.freedom.common.entity.UserDO;
 import java.util.List;
 
 /**

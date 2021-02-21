@@ -1,8 +1,8 @@
 package com.freedom.code.service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.freedom.code.entity.UserDO;
 import com.freedom.code.repository.UserRepository;
+import com.freedom.common.entity.UserDO;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

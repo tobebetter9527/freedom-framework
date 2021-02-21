@@ -1,7 +1,7 @@
 package com.freedom.code.service
 
 import com.freedom.code.annotation.CodeBootTest
-import com.freedom.code.entity.UserDO
+import com.freedom.common.entity.UserDO
 import org.springframework.beans.factory.annotation.Autowired
 import spock.lang.Specification
 
@@ -14,6 +14,7 @@ class UserServiceImplSpec extends Specification {
     private UserService userService;
 
     def "getById"() {
+        //sleep(165453646464546)
         when: 'start'
         UserDO userDO = userService.getById(id)
 

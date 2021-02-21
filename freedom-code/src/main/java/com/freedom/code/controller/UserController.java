@@ -2,8 +2,8 @@ package com.freedom.code.controller;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.freedom.code.entity.UserDO;
 import com.freedom.code.service.UserService;
+import com.freedom.common.entity.UserDO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

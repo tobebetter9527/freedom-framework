@@ -1,6 +1,6 @@
-package com.freedom.code.dto;
+package com.freedom.common.dto;
 
-import com.freedom.code.mybatis.model.BaseDTO;
+import com.freedom.common.model.BaseDTO;
 import lombok.Data;
 
 /**

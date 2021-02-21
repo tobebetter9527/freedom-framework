@@ -1,19 +1,9 @@
 package com.freedom.code.mapper;
 
-import com.freedom.code.annotation.ToEntity;
-import com.freedom.code.dto.CarDTO;
-import com.freedom.code.dto.RoleDTO;
-import com.freedom.code.dto.UserDTO;
-import com.freedom.code.dto.UserRoleDTO;
-import com.freedom.code.dto.UserVO;
-import com.freedom.code.entity.CarDO;
-import com.freedom.code.entity.RoleDO;
-import com.freedom.code.entity.UserDO;
+import com.freedom.common.dto.CarDTO;
+import com.freedom.common.entity.CarDO;
 import java.util.List;
 import org.mapstruct.Mapper;
-import org.mapstruct.MapperConfig;
-import org.mapstruct.Mapping;
-import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
 
 /**

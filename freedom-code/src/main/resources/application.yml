@@ -48,3 +48,7 @@ swagger:
   application-version: 1.0
   application-description: springfox swagger 3.0 demo
   try-host: http://localhost:${server.port}
+
+test:
+  conditional:
+    enabled: false

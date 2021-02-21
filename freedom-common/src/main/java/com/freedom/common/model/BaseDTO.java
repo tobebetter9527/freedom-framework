@@ -1,4 +1,4 @@
-package com.freedom.code.mybatis.model;
+package com.freedom.common.model;
 
 import java.time.LocalDateTime;
 import lombok.Data;

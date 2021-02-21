@@ -1,4 +1,4 @@
-package com.freedom.code.mybatis.model;
+package com.freedom.common.model;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;

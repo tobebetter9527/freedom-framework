@@ -1,10 +1,10 @@
-package com.freedom.code.entity;
+package com.freedom.common.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.freedom.code.mybatis.model.BaseDO;
+import com.freedom.common.model.BaseDO;
 import lombok.Data;
 
 /**

@@ -1,7 +1,6 @@
-package com.freedom.code.entity;
+package com.freedom.common.entity;
 
 import lombok.Data;
-import org.mapstruct.MapperConfig;
 
 /**
  * @author tobebetter9527

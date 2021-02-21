@@ -1,12 +1,12 @@
 package com.freedom.code.mapper;
 
 import com.freedom.code.annotation.ToEntity;
-import com.freedom.code.dto.RoleDTO;
-import com.freedom.code.dto.UserDTO;
-import com.freedom.code.dto.UserRoleDTO;
-import com.freedom.code.dto.UserVO;
-import com.freedom.code.entity.RoleDO;
-import com.freedom.code.entity.UserDO;
+import com.freedom.common.dto.RoleDTO;
+import com.freedom.common.dto.UserDTO;
+import com.freedom.common.dto.UserRoleDTO;
+import com.freedom.common.dto.UserVO;
+import com.freedom.common.entity.RoleDO;
+import com.freedom.common.entity.UserDO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
