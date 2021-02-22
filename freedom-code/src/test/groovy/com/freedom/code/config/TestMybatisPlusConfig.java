@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
  * @create 2021/01/02 11:27
  */
 @ConditionalOnProperty(prefix = "test.conditional", name = "enabled", havingValue = "true")
-@TestConfiguration
+@Configuration
 public class TestMybatisPlusConfig {
 
   @Bean

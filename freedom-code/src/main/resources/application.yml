@@ -30,6 +30,17 @@ spring:
       test-on-borrow: false
       test-on-return: false
 
+  redis:
+    database: 3
+    host: localhost
+    lettuce:
+      pool:
+        max-active: 16
+        max-idle: 8
+        max-wait: 4000
+        min-idle: 6
+    port: 6379
+    timeout: 4000
 # mybatisplus的配置
 mybatis-plus:
   configuration:
