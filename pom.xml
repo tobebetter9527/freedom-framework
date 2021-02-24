@@ -182,6 +182,12 @@
         <version>${cglib-nodep.version}</version>
         <scope>test</scope>
       </dependency>
+      <dependency>
+        <groupId>it.ozimov</groupId>
+        <artifactId>embedded-redis</artifactId>
+        <version>${embedded-redis}</version>
+        <scope>test</scope>
+      </dependency>
       <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
       <dependency>
         <groupId>org.junit.platform</groupId>
@@ -189,14 +195,6 @@
         <version>${junit-platform-launcher}</version>
         <scope>test</scope>
       </dependency>
-      <!-- https://mvnrepository.com/artifact/it.ozimov/embedded-redis -->
-      <dependency>
-        <groupId>it.ozimov</groupId>
-        <artifactId>embedded-redis</artifactId>
-        <version>${embedded-redis}</version>
-        <scope>test</scope>
-      </dependency>
-
 
     </dependencies>
   </dependencyManagement>
