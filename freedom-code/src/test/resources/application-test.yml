@@ -11,7 +11,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     # MYSQL 5 驱动：com.mysql.jdbc.Driver，MYSQL 6+ 驱动：com.mysql.cj.jdbc.Driver
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:mybatisplus;MODE=Mysql;DB_CLOSE_DELAY=1;TRACE_LEVEL_SYSTEM_OUT=2;
+    url: jdbc:h2:mem:mybatisplus;MODE=Mysql;DB_CLOSE_DELAY=-1;TRACE_LEVEL_SYSTEM_OUT=2;
     username: root
     password: root
     druid:
