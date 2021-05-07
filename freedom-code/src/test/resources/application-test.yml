@@ -37,7 +37,8 @@ spring:
     drop-first: false
     enabled: true
     test-rollback-on-update: false
-
+  # h2访问路径：http://localhost:54446/code_proxy/h2-console/login.do 端口通过搜索日志port(s)获得
+  # 代码中添加sleep(165453646464546)，不要打断点，
   h2:
     console:
       enabled: true
