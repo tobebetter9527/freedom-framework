@@ -17,7 +17,7 @@ class UserServiceImplSpec extends Specification {
     private RedisTemplate redisTemplate;
 
     def "getById"() {
-        //sleep(165453646464546)
+        sleep(165453646464546)
         when: 'start'
         UserDO userDO = userService.getById(id)
 

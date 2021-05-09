@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-public class StringContextUtil implements ApplicationContextAware {
+public class SpringContextUtil implements ApplicationContextAware {
 
   private static DefaultListableBeanFactory springFactory;
   private static ApplicationContext context;

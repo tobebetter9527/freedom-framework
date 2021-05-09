@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.freedom.common.model.BaseDO;
-import java.util.Objects;
 import lombok.Data;
 
 /**

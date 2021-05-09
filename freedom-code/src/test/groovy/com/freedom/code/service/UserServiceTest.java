@@ -1,7 +1,7 @@
 package com.freedom.code.service;
 
 import com.freedom.code.FreedomApplication;
-import com.freedom.code.util.StringContextUtil;
+import com.freedom.code.util.SpringContextUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,7 +17,7 @@ import org.springframework.test.context.ActiveProfiles;
 @SpringBootTest(classes = FreedomApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
 public class UserServiceTest {
   @Autowired
-  private StringContextUtil stringContextUtil;
+  private SpringContextUtil springContextUtil;
 
   @Test
   public void selectById() {
