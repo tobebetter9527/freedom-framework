@@ -3,11 +3,10 @@ package com.freedom.code.service;
 import com.freedom.code.FreedomApplication;
 import com.freedom.code.util.SpringContextUtil;
 import com.freedom.common.entity.UserDO;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.test.context.ActiveProfiles;
 
 /**
  * @author tobebetter9527

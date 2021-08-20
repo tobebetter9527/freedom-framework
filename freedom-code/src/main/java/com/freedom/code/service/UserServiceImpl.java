@@ -7,6 +7,7 @@ import com.freedom.common.dto.UserDTO;
 import com.freedom.common.entity.UserDO;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
+import org.activiti.engine.TaskService;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,9 @@ public class UserServiceImpl extends ServiceImpl<UserRepository, UserDO> impleme
 
   @Autowired
   private UserService userService;
+
+  @Autowired
+  private TaskService taskService;
 
   @Override
   @Transactional(rollbackFor = Exception.class)

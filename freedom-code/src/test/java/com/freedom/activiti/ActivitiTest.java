@@ -1,25 +1,20 @@
 package com.freedom.activiti;
 
-import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import com.freedom.code.FreedomApplication;
 import com.freedom.code.service.UserService;
 import com.freedom.code.util.SpringContextUtil;
 import com.freedom.common.dto.UserDTO;
-import com.freedom.common.entity.UserDO;
-import java.lang.reflect.Method;
-import java.util.List;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.test.context.ActiveProfiles;
 
 /**
  * @author tobebetter9527
  * @description user测试类
  * @create 2021/02/17 10:23
  */
-@ActiveProfiles("test")
+//@ActiveProfiles("test")
 @SpringBootTest(classes = FreedomApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
 public class ActivitiTest {
 

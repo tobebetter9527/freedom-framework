@@ -5,6 +5,10 @@ server:
 spring:
   profiles:
     active: dev
+  activiti:
+    database-schema-update: true
+    history-level: full
+    db-history-used: true
   application:
     name: freedom-code
   datasource:
