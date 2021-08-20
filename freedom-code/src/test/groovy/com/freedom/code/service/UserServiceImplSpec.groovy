@@ -3,7 +3,7 @@ package com.freedom.code.service
 import com.freedom.code.annotation.CodeBootTest
 import com.freedom.common.entity.UserDO
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.data.redis.core.RedisTemplate
+//import org.springframework.data.redis.core.RedisTemplate
 import spock.lang.Specification
 
 /**
@@ -13,8 +13,8 @@ import spock.lang.Specification
 class UserServiceImplSpec extends Specification {
     @Autowired
     private UserService userService;
-    @Autowired
-    private RedisTemplate redisTemplate;
+//    @Autowired
+//    private RedisTemplate redisTemplate;
 
     def "getById"() {
         sleep(165453646464546)

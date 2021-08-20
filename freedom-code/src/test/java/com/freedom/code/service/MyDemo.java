@@ -1,9 +1,5 @@
 package com.freedom.code.service;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import org.apache.commons.lang3.StringUtils;
-
 /**
  * @author tobebetter9527
  * @description TODO
@@ -11,11 +7,10 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class MyDemo {
 
-  public static void main(String[] args) {
-    String a = " ";
-    System.out.println(StringUtils.isBlank(a));
-    System.out.println(StringUtils.isEmpty(a));
-
+  public static void main(String[] args) throws Exception {
+    String a = null;
+    System.out.println(a + "safs");
   }
+
 
 }

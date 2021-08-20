@@ -1,8 +1,13 @@
-package com.freedom.code.service;
+package com.freedom.activiti;
 
+import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import com.freedom.code.FreedomApplication;
+import com.freedom.code.service.UserService;
 import com.freedom.code.util.SpringContextUtil;
+import com.freedom.common.dto.UserDTO;
 import com.freedom.common.entity.UserDO;
+import java.lang.reflect.Method;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,26 +19,24 @@ import org.springframework.test.context.ActiveProfiles;
  * @description user测试类
  * @create 2021/02/17 10:23
  */
+@ActiveProfiles("test")
 @SpringBootTest(classes = FreedomApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
-public class UserServiceTest {
+public class ActivitiTest {
 
   @Autowired
   private SpringContextUtil springContextUtil;
   @Autowired
   private UserService userService;
 
-  @Test
-  public void selectById() {
-    //UserDO userDO111 = stringContextUtil.getContext().getBean("userDO111", UserDO.class);
-    UserDO byId = userService.getById("123456");
-    System.out.println(byId);
-  }
 
   @Test
-  public void testRedisServer() {
-    //    System.out.println("Host="+ redisServer.getHost());
-    //    System.out.println("Base="+ redisServer.getBase());
-    //    System.out.println("BindPort="+ redisServer.getBindPort());
+  public void insertUserDO() throws Exception {
+    UserDTO userDTO = new UserDTO();
+    userDTO.setName("zhangsan");
+    userDTO.setAge(27);
+    userDTO.setEmail("123@qq.com");
+
+    userService.saveUserDTO(userDTO);
 
   }
 

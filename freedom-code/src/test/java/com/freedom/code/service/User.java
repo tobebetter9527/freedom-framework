@@ -22,6 +22,10 @@ public class User {
   private Integer age;
   private String email;
 
+  public User() {
+    System.out.println("this is for init user");
+  }
+
   public User(Long id) {
     this.id = id;
   }
@@ -73,5 +77,20 @@ public class User {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  @Override
+  public String toString() {
+    return "User{" +
+        "id=" + id +
+        ", name='" + name + '\'' +
+        ", age=" + age +
+        ", email='" + email + '\'' +
+        '}';
+  }
+
+
+  private void iAmPrivate() {
+    System.out.println("iAmPrivate");
   }
 }

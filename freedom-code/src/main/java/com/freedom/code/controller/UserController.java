@@ -3,6 +3,7 @@ package com.freedom.code.controller;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.freedom.code.service.UserService;
+import com.freedom.common.dto.UserDTO;
 import com.freedom.common.entity.UserDO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -17,11 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author tobebetter9527
- * @description TODO
  * @create 2020/12/28 0:14
  */
 @Api(tags = {"用户接口"})
-@RestController(value = "myUserContro")
+@RestController
 @RequestMapping("/v1/user")
 public class UserController {
 
@@ -42,8 +42,8 @@ public class UserController {
 
   @ApiOperation(value = "新增用户", notes = "新增用户")
   @PostMapping("/save")
-  public void save(@RequestBody UserDO userDO) {
-    userService.save(userDO);
+  public void save(@RequestBody UserDTO userDTO) {
+    userService.saveUserDTO(userDTO);
   }
 
   @ApiOperation(value = "修改用户", notes = "修改用户")

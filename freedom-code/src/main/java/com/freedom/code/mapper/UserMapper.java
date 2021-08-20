@@ -49,5 +49,6 @@ public interface UserMapper {
     return roleDTO;
   }
 
+  UserDO dtoToDo(UserDTO userDTO);
 
 }

@@ -1,6 +1,7 @@
 package com.freedom.code.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.freedom.common.dto.UserDTO;
 import com.freedom.common.entity.UserDO;
 import java.util.List;
 
@@ -14,4 +15,7 @@ public interface UserService extends IService<UserDO> {
   List<UserDO> listAll();
 
   UserDO selectById(Long id);
+
+  UserDO saveUserDTO(UserDTO userDTO);
+
 }

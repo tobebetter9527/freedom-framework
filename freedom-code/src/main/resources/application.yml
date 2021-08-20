@@ -30,6 +30,14 @@ spring:
       test-on-borrow: false
       test-on-return: false
 
+  liquibase:
+    change-log: 'classpath:/db/changelog/db.changelog-master.xml'
+    database-change-log-lock-table: databasechangeloglock
+    database-change-log-table: databasechangelog
+    drop-first: false
+    enabled: false
+    test-rollback-on-update: false
+
   redis:
     database: 3
     host: localhost
