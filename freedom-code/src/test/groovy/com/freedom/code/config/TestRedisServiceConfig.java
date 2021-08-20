@@ -16,20 +16,20 @@ import redis.embedded.RedisServer;
 @Configuration
 public class TestRedisServiceConfig {
 
-  private RedisServer redisServer;
-
-  public TestRedisServiceConfig(RedisProperties redisProperties) {
-    // this.redisServer = new RedisServer(redisProperties.getPort());
-    this.redisServer = RedisServer.builder().port(redisProperties.getPort()).setting("maxmemory 128M").build();
-  }
-
-  @PostConstruct
-  public void postConstruct() {
-    redisServer.start();
-  }
-
-  @PreDestroy
-  public void preDestroy() {
-    redisServer.stop();
-  }
+//  private RedisServer redisServer;
+//
+//  public TestRedisServiceConfig(RedisProperties redisProperties) {
+//    // this.redisServer = new RedisServer(redisProperties.getPort());
+//    this.redisServer = RedisServer.builder().port(redisProperties.getPort()).setting("maxmemory 128M").build();
+//  }
+//
+//  @PostConstruct
+//  public void postConstruct() {
+//    redisServer.start();
+//  }
+//
+//  @PreDestroy
+//  public void preDestroy() {
+//    redisServer.stop();
+//  }
 }
