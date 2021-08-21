@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 
 /**
- * TODO
+ * 模拟security登录工具
  *
  * @author tobebetter9527
  * @create 2021/08/21 0:18

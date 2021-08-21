@@ -20,7 +20,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 /**
- * TODO
+ * activiti7整合spring-security
  *
  * @author tobebetter9527
  * @create 2021/08/21 0:12
@@ -48,7 +48,7 @@ public class DemoApplicationConfiguration extends WebSecurityConfigurerAdapter {
         {"ryandawsonuk", "password", "ROLE_ACTIVITI_USER", "GROUP_activitiTeam"},
         {"erdemedeiros", "password", "ROLE_ACTIVITI_USER", "GROUP_activitiTeam"},
         {"other", "password", "ROLE_ACTIVITI_USER", "GROUP_otherTeam"},
-        {"admin", "password", "ROLE_ACTIVITI_ADMIN"},
+        {"admin", "password", "ROLE_ACTIVITI_ADMIN","ACTIVITI_USER"},
     };
 
     for (String[] user : usersGroupsAndRoles) {
