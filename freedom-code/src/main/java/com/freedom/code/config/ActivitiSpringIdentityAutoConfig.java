@@ -49,7 +49,7 @@ public class ActivitiSpringIdentityAutoConfig {
     configuration.setDbHistoryUsed(true);
     configuration.setIdGenerator(activitiGeneratorConfig);
     configuration.setDeploymentMode("never-fail");
-
+    // configuration.setUserGroupManager(); 可以自己实现UserGroupManager，同时排除ActivitiSpringIdentityAutoConfiguration
     if (autoDeploy) {
       Resource[] resources = null;
 

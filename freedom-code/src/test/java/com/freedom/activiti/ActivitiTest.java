@@ -162,7 +162,7 @@ public class ActivitiTest {
    */
   @Test
   public void completeTask() {
-    securityUtil.logInAs("admin");        //指定组内任务人
+    securityUtil.logInAs("salaboy");        //指定组内任务人
     Page<org.activiti.api.task.model.Task> tasks = taskRuntime.tasks(Pageable.of(0, 10));
     if (tasks.getTotalItems() > 0) {
       for (org.activiti.api.task.model.Task task : tasks.getContent()) {

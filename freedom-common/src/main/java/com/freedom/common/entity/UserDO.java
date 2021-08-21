@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.freedom.common.model.BaseDO;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * @author tobebetter9527
@@ -14,6 +16,8 @@ import lombok.Data;
  */
 @Data
 @TableName("user")
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public class UserDO extends BaseDO {
 
   @TableId(type = IdType.ASSIGN_ID)
