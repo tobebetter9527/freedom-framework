@@ -3,6 +3,7 @@ package com.freedom.code.controller;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.freedom.code.service.UserService;
+import com.freedom.code.strategy.CsmsStrategyContext;
 import com.freedom.common.dto.UserDTO;
 import com.freedom.common.entity.UserDO;
 import io.swagger.annotations.Api;
@@ -27,11 +28,19 @@ public class UserController {
 
   @Autowired
   private UserService userService;
+  @Autowired
+  private CsmsStrategyContext csmsStrategyContext;
 
   @ApiOperation(value = "根据ID查询用户", notes = "查询用户")
   @GetMapping("/getById")
   public UserDO getById(@ApiParam(value = "用户id") @RequestParam("id") Long id) {
-    return userService.getById(id);
+    return userService.selectById(id);
+  }
+
+  @ApiOperation(value = "根据ID查询用户", notes = "查询用户")
+  @GetMapping("/doCsmsStrategy")
+  public String doCsmsStrategy(@ApiParam(value = "用户id") @RequestParam("id") Long id) {
+    return csmsStrategyContext.doCsmsStrategy(id);
   }
 
   @ApiOperation(value = "分页查询", notes = "分页查询")
@@ -42,7 +51,7 @@ public class UserController {
 
   @ApiOperation(value = "新增用户", notes = "新增用户")
   @PostMapping("/save")
-  public void save(@RequestBody UserDTO userDTO) {
+  public void save(@ApiParam(value = "用户信息") @RequestBody UserDTO userDTO) {
     userService.saveUserDTO(userDTO);
   }
 
