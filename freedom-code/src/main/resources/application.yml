@@ -76,3 +76,17 @@ swagger:
 test:
   conditional:
     enabled: false
+  apollo:
+    test: false
+
+# apollo配置
+apollo:
+  bootstrap:
+    enabled: true
+    namespaces: application-dev.yml
+    eagerLoad:
+      enabled: true
+  cache-dir: E:\12_learning\apollo\apollo-cache
+  meta: http://localhost:8080
+app:
+  id: freedom-code

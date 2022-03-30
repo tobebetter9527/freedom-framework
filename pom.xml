@@ -38,6 +38,7 @@
     <springfox-swagger.version>3.0.0</springfox-swagger.version>
     <mapstruct.version>1.4.1.Final</mapstruct.version>
     <activiti.version>7.1.0.M6</activiti.version>
+    <apollo.client>1.9.2</apollo.client>
 
     <liquibase.version>3.8.9</liquibase.version>
     <h2.version>1.4.197</h2.version>
@@ -113,6 +114,12 @@
         <groupId>com.alibaba</groupId>
         <artifactId>druid</artifactId>
         <version>${druid.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.ctrip.framework.apollo</groupId>
+        <artifactId>apollo-client</artifactId>
+        <version>${apollo.client}</version>
       </dependency>
 
       <!--Liquibase-->
