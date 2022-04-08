@@ -2,7 +2,6 @@ package com.freedom.code.service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.freedom.code.annotation.StartTaskRun;
-import com.freedom.code.annotation.StartTaskRuns;
 import com.freedom.code.mapper.UserMapper;
 import com.freedom.code.repository.UserRepository;
 import com.freedom.code.strategy.CsmsStrategy;
@@ -10,8 +9,6 @@ import com.freedom.common.dto.UserDTO;
 import com.freedom.common.entity.UserDO;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
-import org.activiti.engine.TaskService;
-import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -28,12 +25,8 @@ public class UserServiceImpl extends ServiceImpl<UserRepository, UserDO> impleme
 
   @Autowired
   private UserRepository userRepository;
-
   @Autowired
   private UserService userService;
-
-  @Autowired
-  private TaskService taskService;
 
   @Override
   @Transactional(rollbackFor = Exception.class)

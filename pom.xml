@@ -37,7 +37,6 @@
     <hutool.version>5.5.4</hutool.version>
     <springfox-swagger.version>3.0.0</springfox-swagger.version>
     <mapstruct.version>1.4.1.Final</mapstruct.version>
-    <activiti.version>7.1.0.M6</activiti.version>
     <apollo.client>1.9.2</apollo.client>
 
     <liquibase.version>3.8.9</liquibase.version>
@@ -195,15 +194,6 @@
         <groupId>org.mapstruct</groupId>
         <artifactId>mapstruct</artifactId>
         <version>${mapstruct.version}</version>
-      </dependency>
-
-      <!--工作流-->
-      <dependency>
-        <groupId>org.activiti.dependencies</groupId>
-        <artifactId>activiti-dependencies</artifactId>
-        <version>${activiti.version}</version>
-        <scope>import</scope>
-        <type>pom</type>
       </dependency>
 
       <!--引入单元测试套件-->
