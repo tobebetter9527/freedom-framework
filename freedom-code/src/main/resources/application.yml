@@ -3,6 +3,9 @@ server:
   servlet:
     context-path: /code_proxy
 spring:
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
   profiles:
     active: dev
   application:
@@ -49,6 +52,10 @@ spring:
         min-idle: 6
     port: 6379
     timeout: 4000
+# springboot升级到2.6.6报错 org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 # mybatisplus的配置
 mybatis-plus:
   configuration:
