@@ -33,6 +33,21 @@ spring:
       test-on-borrow: false
       test-on-return: false
 
+  # consul
+  cloud:
+    consul:
+      enabled: true
+      host: 192.168.66.131
+      port: 8501
+      discovery:
+        hostname: ${spring.cloud.client.ip-address}
+        instance-id: ${spring.application.name}:${spring.cloud.consul.discovery.hostname}:${server.port}
+        health-check-path: ${server.servlet.context-path}/actuator/health
+        health-check-interval: 15s
+        register: true
+        register-health-check: true
+        service-name: ${spring.application.name}
+
   liquibase:
     change-log: 'classpath:/db/changelog/db.changelog-master.xml'
     database-change-log-lock-table: databasechangeloglock
@@ -53,9 +68,20 @@ spring:
     port: 6379
     timeout: 4000
 # springboot升级到2.6.6报错 org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+
+# 放开端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
 # mybatisplus的配置
 mybatis-plus:
   configuration:
@@ -69,7 +95,7 @@ mybatis-plus:
 
 # ===== 自定义swagger配置 ===== #
 swagger:
-  enable: true
+  enable: false
   application-name: ${spring.application.name}
   application-version: 1.0
   application-description: springfox swagger 3.0 demo
@@ -84,7 +110,7 @@ test:
 # apollo配置
 apollo:
   bootstrap:
-    enabled: true
+    enabled: false
     namespaces: application-dev.yml
     eagerLoad:
       enabled: true
