@@ -29,4 +29,6 @@ public class UserDO extends BaseDO {
   @TableField(exist = false)
   private RoleDO roleDO;
 
+  @TableField(exist = false)
+  private Integer port;
 }

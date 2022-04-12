@@ -43,7 +43,8 @@ spring:
         hostname: ${spring.cloud.client.ip-address}
         instance-id: ${spring.application.name}:${spring.cloud.consul.discovery.hostname}:${server.port}
         health-check-path: ${server.servlet.context-path}/actuator/health
-        health-check-interval: 15s
+        health-check-interval: 10s
+        health-check-critical-timeout: 30s # 健康检查失败30s，自动下线失效服务
         register: true
         register-health-check: true
         service-name: ${spring.application.name}
@@ -118,3 +119,4 @@ apollo:
   meta: http://localhost:8080
 app:
   id: freedom-code
+env: dev

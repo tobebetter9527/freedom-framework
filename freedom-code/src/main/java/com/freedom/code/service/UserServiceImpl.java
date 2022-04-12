@@ -10,6 +10,7 @@ import com.freedom.common.entity.UserDO;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,6 +28,9 @@ public class UserServiceImpl extends ServiceImpl<UserRepository, UserDO> impleme
   private UserRepository userRepository;
   @Autowired
   private UserService userService;
+  @Value("${server.port}")
+  private Integer port;
+
 
   @Override
   @Transactional(rollbackFor = Exception.class)
@@ -48,6 +52,7 @@ public class UserServiceImpl extends ServiceImpl<UserRepository, UserDO> impleme
       }
     }
     UserDO userDO = baseMapper.selectById(id);
+    userDO.setPort(port);
     return userDO;
   }
 
