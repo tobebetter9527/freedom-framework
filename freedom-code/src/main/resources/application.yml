@@ -48,6 +48,8 @@ spring:
         register: true
         register-health-check: true
         service-name: ${spring.application.name}
+        tags:
+          - env=${spring.profiles.active} # 可以用这个来区分环境
 
   liquibase:
     change-log: 'classpath:/db/changelog/db.changelog-master.xml'
