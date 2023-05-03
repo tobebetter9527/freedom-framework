@@ -16,5 +16,4 @@ public class UserDTO extends BaseDTO {
   private Integer age;
   private String email;
 
-  private RoleDTO roleDTO;
 }

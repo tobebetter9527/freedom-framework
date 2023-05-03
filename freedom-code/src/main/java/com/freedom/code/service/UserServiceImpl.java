@@ -5,6 +5,7 @@ import com.freedom.code.annotation.StartTaskRun;
 import com.freedom.code.mapper.UserMapper;
 import com.freedom.code.repository.UserRepository;
 import com.freedom.code.strategy.CsmsStrategy;
+import com.freedom.common.dto.OrderDTO;
 import com.freedom.common.dto.UserDTO;
 import com.freedom.common.entity.UserDO;
 import java.util.List;
@@ -12,7 +13,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -30,6 +30,8 @@ public class UserServiceImpl extends ServiceImpl<UserRepository, UserDO> impleme
   private UserService userService;
   @Value("${server.port}")
   private Integer port;
+  @Autowired
+  private OrderFeignService orderFeignService;
 
 
   @Override
@@ -44,13 +46,16 @@ public class UserServiceImpl extends ServiceImpl<UserRepository, UserDO> impleme
 
   @StartTaskRun(businessType = 5)
   @Override
-  @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRES_NEW)
+  @Transactional(rollbackFor = Exception.class)
   public UserDO selectById(Long id) {
     if (id != null) {
       if (id.equals(1L)) {
         return null;
       }
     }
+    OrderDTO orderDTO = orderFeignService.getById(123456L);
+    log.info("selectById orderDTO:{}", orderDTO);
+
     UserDO userDO = baseMapper.selectById(id);
     userDO.setPort(port);
     return userDO;

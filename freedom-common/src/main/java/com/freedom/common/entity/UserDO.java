@@ -15,7 +15,7 @@ import lombok.ToString;
  * @create 2020/12/27 20:21
  */
 @Data
-@TableName("user")
+@TableName("user_tb")
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class UserDO extends BaseDO {
@@ -26,8 +26,6 @@ public class UserDO extends BaseDO {
   private Integer age;
   private String email;
 
-  @TableField(exist = false)
-  private RoleDO roleDO;
 
   @TableField(exist = false)
   private Integer port;

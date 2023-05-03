@@ -22,8 +22,6 @@ public interface UserMapper {
 
   UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
-  @Mapping(target = "roleDTO", source = "roleDO")
-  UserDTO doToDto(UserDO userDO, @MappingTarget UserDTO userDTO);
 
 
   @Mapping(target = "username", source = "userDO.name")
@@ -31,7 +29,6 @@ public interface UserMapper {
   @Mapping(target = "age", source = "myAge")
   UserRoleDTO doToUserRoleDto(UserDO userDO, RoleDO roleDO, Integer myAge);
 
-  @Mapping(target = "roleDTO", source = "roleDO")
   UserDTO doToDto(UserDO userDO);
 
   @ToEntity
